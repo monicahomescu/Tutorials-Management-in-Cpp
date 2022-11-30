@@ -1,6 +1,6 @@
 # Tutorials-Management-in-Cpp
 
-You are very passionate about programing (otherwise you wouldn't be reading this) and C++ is a language close to your heart. On your way to becoming a guru, you study a lot and watch many tutorials. To make sure you do not miss any good tutorials, you absolutely need a software application to help you manage your tutorials and create watch lists. The application can be used in two modes: administrator and user. When the application is started, it will offer the option to choose the mode.
+The application can be used in two modes: administrator and user. When the application is started, it will offer the option to choose the mode.
 
 **Administrator mode:** \
 The application will have a database , which holds all the tutorials. You must be able to update the database, meaning: add a new tutorial, delete a tutorial and update the information of a tutorial. Each **Tutorial** has a `title`, a `presenter` (name of the presenter person), a `duration` (minutes and seconds), a number of `likes` and a `link` towards the online resource containing the tutorial. The administrators will also have the option to see all the tutorials in the database.
@@ -21,32 +21,18 @@ Requirements:
 - Handle the following situations:
     - If an entity that already exists is added, a message is shown and the entity is not stored. You must decide what makes an entity unique.
     - If the user tries to update/delete an entity that does not exist, a message will be shown and there will be no effect on the list of entities.
-- `DynamicVector` must be a templated class
-
-For your solution to the previous assignment (Assignment 05-06), add the following features:
-1. Replace the templated DynamicVector with the STL vector. Use STL algorithms wherever possible in your application (e.g. in your filter function you could use `copy_if`, `count_if`). Replace all your for loops either with STL algorithms, or with C++11's ranged-based for loop.
-
-2. Store data in a text file. When the program starts, entities are read from the file. Modifications made during program execution are stored in the file. Implement this using the `iostream` library. Create insertion and extraction operators for your entities and use these when reading/writing to files or the console.
-
-3. Use exceptions to signal errors:
+- Use STL algorithms wherever possible in your application (e.g. in your filter function you could use `copy_if`, `count_if`). Replace all your for loops either with STL algorithms, or with C++11's ranged-based for loop.
+- Store data in a text file. When the program starts, entities are read from the file. Modifications made during program execution are stored in the file. Implement this using the `iostream` library. Create insertion and extraction operators for your entities and use these when reading/writing to files or the console.
+- Use exceptions to signal errors:
     - from the repository;
     - validation errors – validate your entities using Validator classes;
     - create your own exception classes.
     - validate program input.
-
-4.	Depending on your assignment, store your (adoption list, movie watch list, shopping basket or tutorial watch list) in a file. When the application starts, the user should choose the type of file between `CSV` or `HTML`. Depending on the type, the application will save the list in the correct format.
-
+- Store your tutorial watch list in a file. When the application starts, the user should choose the type of file between `CSV` or `HTML`. Depending on the type, the application will save the list in the correct format.
     **Indications**\
     The CSV file will contain each entity on one line and the attributes will be separated by comma \
     The HTML file will contain a table, in which each row holds the data of one entity. The columns of the table will contain the names of the data attributes.\
     These are exemplified in the [example.csv](example.csv) and [example.html](example.html) files.
     `CSV` and `HTML` files are used to save and display data to the user; they act as program outputs, so data should not be read from them!
-
-5. Add a new command, allowing the user to see the:
-    * adoption list
-    * movie watch list
-    * shopping basket
-    * tutorial watch list\
-Displaying the list means opening the saved file (`CSV` or `HTML`) with the correct application (`CSV` files using Notepad, Notepad++, Microsoft Excel etc. and `HTML` files using a browser)
-
-6. Create a UML class diagram for your entire application. For this, you can use any tool that you like ([StarUML](https://staruml.io/) or [LucidChart](https://www.lucidchart.com/) are only some examples. Many other options exist.
+- Add a command, allowing the user to see the tutorial watch list. Displaying the list means opening the saved file (`CSV` or `HTML`) with the correct application (`CSV` files using Notepad, Notepad++, Microsoft Excel etc. and `HTML` files using a browser)
+- Create a UML class diagram for the entire application.
