@@ -12,3 +12,14 @@ A user can create a watch list with the tutorials that he/she wants to watch. Th
 - If the tutorial seems uninteresting, the user can choose not to add it to the watch list and continue to the next. In this case, the information corresponding to the next tutorial is shown and the user is again offered the possibility to add it to the watch list. This can continue as long as the user wants, as when arriving to the end of the list of tutorials with the given presenter, if the user chooses next, the application will again show the first tutorial.
 - Delete a tutorial from the watch list, after the user watched the tutorial. When deleting a tutorial from the watch list, the user can also rate the tutorial (with a like), and in this case, the number of likes for the tutorial will be increased.
 - See the watch list.
+
+Requirements:
+- The application must use layered architecture.
+- Provide tests and specifications for non-trivial functions outside the UI. Test coverage must be at least 98% for all layers, except the UI.
+- Have at least 10 entities in your memory repository.
+- Validate all input data.
+- Handle the following situations:
+    - If an entity that already exists is added, a message is shown and the entity is not stored. You must decide what makes an entity unique.
+    - If the user tries to update/delete an entity that does not exist, a message will be shown and there will be no effect on the list of entities.
+- Define the `DynamicVector` class which provides the specific operations: `add`, `remove`, `length`, etc. The array of elements must be dynamically allocated
+- `DynamicVector` must be a templated class
